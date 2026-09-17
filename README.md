@@ -48,7 +48,17 @@ cybersecurity_toolkit/
     └── network_tools.py
 ```
 
-#### Usage
+## Libraries Used
+
+This project uses only Python's standard library, so no external libraries are required.
+
+* **secrets** — Used to generate cryptographically secure random passwords.
+* **hashlib** — Used to generate SHA-256 and SHA-512 cryptographic hashes.
+* **socket** — Used for IP/domain resolution and TCP port checking.
+* **ipaddress** — Used to validate IP addresses.
+
+
+## Usage
 
 Run the project using:
 
