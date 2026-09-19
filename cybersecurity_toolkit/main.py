@@ -66,11 +66,11 @@ def main():
 
             print("-" * 14 + " File Hash Checker " + "-" * 15 + "\n")
             try:
-                file_path = input("Enter file path: ")
+                file_path = input("Enter file name: ")
                 algorithm = input("Enter algorithm (SHA-256 / SHA-512): ")
                 print(f"File's Hash: \n{file_hash_checker(file_path, algorithm)}\n")
             except FileNotFoundError:
-                print("Error! File not found\n")
+                print("Error! File not found.\nMake sure the file is in your current working directory.\n")
 
         elif choice == "5":
 
