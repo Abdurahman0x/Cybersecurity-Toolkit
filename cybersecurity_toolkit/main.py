@@ -1,5 +1,5 @@
 # Cybersecurity Toolkit - A collection of basic security tools.
-
+from colorama import Fore
 from toolkit.password_tools import password_strength_checker, secure_password_generator
 from toolkit.hash_tools import hash_generator
 from toolkit.file_tools import file_hash_checker
@@ -15,7 +15,7 @@ def main():
         None
     """
     
-    print('=' * 50)
+    print(Fore.LIGHTGREEN_EX + '=' * 50)
     print("||" + " " * 46 + "||")
     print("||" + " " * 12 + "CYBERSECURITY TOOLKIT" + " " * 13 + "||")
     print("||" + " " * 17 + "Version 1.0" + " " * 18 + "||")
