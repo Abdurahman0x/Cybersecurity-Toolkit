@@ -30,7 +30,7 @@ A Python-based collection of basic cybersecurity tools designed for learning and
 
 * **Port Checker**
 
-  * Checks whether a TCP port is reachable on a target.
+  * Checks whether a TCP port is open on a target.
 
 ## Project Structure
 
@@ -50,12 +50,13 @@ cybersecurity_toolkit/
 
 ## Libraries Used
 
-This project uses only Python's standard library, so no external libraries are required.
+This project uses Python's standard library along with the external `colorama` library.
 
-* **secrets** — Used to generate cryptographically secure random passwords.
-* **hashlib** — Used to generate SHA-256 and SHA-512 cryptographic hashes.
-* **socket** — Used for IP/domain resolution and TCP port checking.
-* **ipaddress** — Used to validate IP addresses.
+- **secrets** — Used to generate cryptographically secure random passwords.
+- **hashlib** — Used to generate SHA-256 and SHA-512 cryptographic hashes.
+- **socket** — Used for IP/domain resolution and TCP port checking.
+- **ipaddress** — Used to validate IP addresses.
+- **colorama** — Used to add colors and improve the visual presentation of the command-line interface.
 
 
 ## Usage
