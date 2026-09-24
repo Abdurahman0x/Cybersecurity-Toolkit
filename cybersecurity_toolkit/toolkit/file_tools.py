@@ -1,4 +1,5 @@
 import hashlib
+from colorama import Fore
 
 
 def file_hash_checker(file_path: str, algorithm: str):
@@ -27,7 +28,7 @@ def file_hash_checker(file_path: str, algorithm: str):
                 break
 
             else:
-                print("\nUnsupported algorithm! Please use SHA-256 or SHA-512.")
+                print(Fore.RED + "\nUnsupported algorithm!" + Fore.LIGHTGREEN_EX + "\nPlease use SHA-256 or SHA-512.")
                 algorithm = input("Enter algorithm (SHA-256 / SHA-512): ")
 
         while True:
@@ -39,4 +40,4 @@ def file_hash_checker(file_path: str, algorithm: str):
 
             hash_function.update(chunk)
 
-        return hash_function.hexdigest()
+        return hash_function.hexdigest() + "\n\n" + '=' * 50

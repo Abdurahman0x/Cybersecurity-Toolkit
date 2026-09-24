@@ -1,4 +1,5 @@
 import secrets
+from colorama import Fore
 
 
 def password_strength_checker(password: str):
@@ -18,7 +19,7 @@ def password_strength_checker(password: str):
 
     if len(password) < 8:
         note_for_user = "Password must be at least 8 characters.\n"
-        return "Password Strength Level: Weak\n" + note_for_user
+        return "Password Strength Level:" + Fore.RED + "Weak\n" + Fore.LIGHTGREEN_EX + note_for_user + "\n" + '=' * 50 + "\n"
 
     has_uppercase = False
     has_lowercase = False
@@ -56,15 +57,15 @@ def password_strength_checker(password: str):
 
 
     if strength_level <= 2:
-        strength_level = "Weak"
+        strength_level = Fore.RED + "Weak"
 
     elif strength_level <= 3:
-        strength_level = "Medium"
+        strength_level = Fore.YELLOW + "Medium"
 
     else:
         strength_level = "Strong"
 
-    return "Password Strength Level: " + str(strength_level) + note_for_user
+    return "Password Strength Level: " + str(strength_level) + Fore.LIGHTGREEN_EX + note_for_user + "\n" + '=' * 50 + "\n"
 
 
 def secure_password_generator(password_length: int):
@@ -78,8 +79,8 @@ def secure_password_generator(password_length: int):
         str: The generated secure password.
     """
 
-    if password_length < 4:
-        return "Password length must be at least 4 characters."
+    if password_length < 8:
+        return Fore.RED + "Password length must be at least 8 characters.\n\n" + Fore.LIGHTGREEN_EX + '=' * 50 
 
     numbers = "0123456789"
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -102,4 +103,4 @@ def secure_password_generator(password_length: int):
     secrets.SystemRandom().shuffle(password_list)
     secure_password = "".join(password_list)
 
-    return "Generated Password: " + secure_password
+    return "Generated Password: " + secure_password + "\n\n" + '=' * 50

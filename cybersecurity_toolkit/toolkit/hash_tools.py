@@ -1,4 +1,5 @@
 import hashlib
+from colorama import Fore
 
 
 def hash_generator(text: str, algorithm: str):
@@ -17,11 +18,11 @@ def hash_generator(text: str, algorithm: str):
     while True:
 
         if algorithm.upper() == "SHA-256":
-            return hashlib.sha256(text.encode()).hexdigest()
+            return hashlib.sha256(text.encode()).hexdigest() + "\n\n" + '=' * 50
         
         elif algorithm.upper() == "SHA-512":
-            return hashlib.sha512(text.encode()).hexdigest()
+            return hashlib.sha512(text.encode()).hexdigest() + "\n\n" + '=' * 50
     
         else:
-            print("\nUnsupported algorithm! Please use SHA-256 or SHA-512.")
+            print(Fore.RED + "\nUnsupported algorithm!" + Fore.LIGHTGREEN_EX + "\nPlease use SHA-256 or SHA-512.")
             algorithm = input("Enter algorithm (SHA-256 / SHA-512): ")
