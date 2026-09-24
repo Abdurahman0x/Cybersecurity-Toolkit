@@ -31,6 +31,7 @@ def main():
     print("[5] IP / Domain Checker")
     print("[6] Port Checker")
     print("[0] Exit\n")
+    print('=' * 50 + "\n")
 
     while True:
         choice = input("Choose a tool: ")
@@ -42,13 +43,13 @@ def main():
     
         if choice == "1":
     
-            print("-" * 10 + " Password Strength Checker " + "-" * 11 + "\n")
+            print("=" * 11 + " Password Strength Checker " + "=" * 12 + "\n")
             user_password = input("Enter password: ")
             print(password_strength_checker(user_password))
     
         elif choice == "2":
     
-            print("-" * 10 + " Secure Password Generator " + "-" * 11 + "\n")
+            print("=" * 11 + " Secure Password Generator " + "=" * 12 + "\n")
             try:
                 password_length = int(input("Enter the desired password's length (length >= 4): "))
                 print(secure_password_generator(password_length) + "\n")
@@ -57,14 +58,14 @@ def main():
 
         elif choice == "3":
 
-            print("-" * 16 + " Hash Generator " + "-" * 16 + "\n")
+            print("=" * 17 + " Hash Generator " + "=" * 17 + "\n")
             text = input("Enter text to hash: ")
             algorithm = input("Enter algorithm (SHA-256 / SHA-512): ")
             print(f"Hash Generated: \n{hash_generator(text, algorithm)}\n")
 
         elif choice == "4":
 
-            print("-" * 14 + " File Hash Checker " + "-" * 15 + "\n")
+            print("=" * 15 + " File Hash Checker " + "=" * 16 + "\n")
             try:
                 file_path = input("Enter file name: ")
                 algorithm = input("Enter algorithm (SHA-256 / SHA-512): ")
@@ -74,13 +75,13 @@ def main():
 
         elif choice == "5":
 
-            print("-" * 13 + " IP / Domain Checker " + "-" * 14 + "\n")
+            print("=" * 14 + " IP / Domain Checker " + "=" * 15 + "\n")
             target = input("Enter IP / Domain: ")
             print(ip_domain_checker(target) + "\n")
 
         elif choice == "6":
 
-            print("-" * 17 + " Port Checker " + "-" * 17 + "\n")
+            print("=" * 18 + " Port Checker " + "=" * 18 + "\n")
             try:
                 target = input("Enter IP / Domain: ")
                 port_number = int(input("Enter port number: "))
